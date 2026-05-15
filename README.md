@@ -20,4 +20,16 @@ start index.html
 - Controles de velocidade, pausar/continuar e sons básicos
 
 ## Licença
-Use como preferir.
+Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+## Contribuição
+
+Contribuições são bem-vindas! Para contribuir:
+
+1. Fork este repositório.
+2. Crie uma branch com sua feature: `git checkout -b feature/nome-da-feature`.
+3. Faça commit das suas alterações: `git commit -am "feat: descrição da feature"`.
+4. Faça push para a branch: `git push origin feature/nome-da-feature`.
+5. Abra um Pull Request descrevendo as alterações.
+
+Sinta-se à vontade para abrir issues para bugs ou sugestões.
