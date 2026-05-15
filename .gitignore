@@ -1,0 +1,8 @@
+# Ignorar dependências e arquivos temporários
+node_modules/
+.env
+.DS_Store
+*.log
+
+# VS Code
+.vscode/
