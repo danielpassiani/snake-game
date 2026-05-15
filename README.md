@@ -5,33 +5,38 @@
     <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white" alt="CSS3" />
     <img src="https://img.shields.io/badge/JavaScript-323330?style=flat&logo=javascript&logoColor=F7DF1E" alt="JavaScript" />
   </p>
-  <p><i>Uma versão nostálgica do clássico Jogo da Cobrinha, com foco na lógica de programação e renderização gráfica.</i></p>
+  <p><i>Uma versão nostálgica do clássico Jogo da Cobrinha, desenvolvida com foco em manipulação de DOM, Canvas API e lógica bidimensional.</i></p>
 </div>
 
 ---
 
 ## 📖 Sobre o Projeto
 
-Este projeto é uma recriação simples e funcional do clássico "Snake Game", desenvolvida utilizando apenas tecnologias web nativas (Vanilla JS). É uma excelente aplicação prática para exercitar lógica bidimensional, sistema de coordenadas e gerenciamento de eventos (inputs do usuário).
+Este projeto é uma recriação completa do clássico "Snake Game" utilizando puramente **Vanilla JavaScript**, HTML e CSS. O objetivo principal desta aplicação é demonstrar a aplicação prática de fundamentos essenciais da programação web, como estruturas de dados, loops de renderização e consumo de APIs nativas do navegador, sem a dependência de bibliotecas ou frameworks externos.
 
-## ✨ Recursos Implementados
+## 🧠 Lógica e Arquitetura do Código
 
-- 🎨 **Área de Jogo:** Renderização dinâmica utilizando a API gráfica do `<canvas>` (400x400).
-- ⌨️ **Controles de Precisão:** Movimentação fluida com as setas do teclado, incluindo uma trava de segurança para impedir a reversão instantânea (evitando o "game over" acidental ao inverter a direção).
-- ⚙️ **Mecânicas Clássicas:**
-  - Sistema de pontuação (+10 pontos por comida).
-  - Crescimento automático da cobrinha a cada pontuação.
-  - Rigorosa detecção de colisões (com as paredes limitadoras e com o próprio corpo).
-  - Reinício automático da partida.
-- 🕹️ **Recursos Extras:** Controles de velocidade, sistema de Pausar/Continuar e efeitos sonoros básicos para maior imersão.
+O código foi estruturado de forma procedural, focando na clareza do fluxo de execução. Alguns destaques técnicos da implementação incluem:
+
+* **Estruturas de Dados:** A cobrinha é gerenciada como um *Array* de coordenadas `{x, y}` na malha do jogo. O movimento é simulado de forma eficiente inserindo uma nova "cabeça" no início da matriz (`unshift()`) e removendo a "cauda" no final (`pop()`), a menos que a cobra tenha se alimentado.
+* **Motor Gráfico (Canvas API):** Toda a renderização visual é feita desenhando formas geométricas (`fillRect`) diretamente no contexto 2D do `<canvas>`.
+* **Gerenciamento de Estado (Game Loop):** O jogo roda através de um ciclo contínuo gerido por `setInterval`, onde a cada "tick" (milissegundos) o estado lógico do jogo é calculado (`update()`) e imediatamente redesenhado na tela (`draw()`).
+* **Áudio Sintetizado (Web Audio API):** Em vez de utilizar arquivos `.mp3` externos pesados, os efeitos sonoros (captura da maçã e o *Game Over*) são gerados matematicamente no próprio navegador usando osciladores (`AudioContext`), economizando banda e demonstrando domínio sobre APIs multimídia.
+* **Tratamento de Eventos Rigoroso:** Captura de *inputs* do teclado com `e.preventDefault()` (para evitar que a página inteira role junto com as setas) e implementação de validação lógica para impedir que o jogador faça uma reversão instantânea de 180 graus (causando um *game over* acidental).
+
+## ✨ Funcionalidades Adicionais
+
+* **Controle de Dificuldade:** Seletor de velocidade dinâmico (Lento, Normal, Rápido) que ajusta o tempo de resposta do *Game Loop* em tempo real.
+* **Sistema de Pausa:** Interrupção segura do intervalo do jogo com a capacidade de retomá-lo exatamente do mesmo quadro.
+* **Feedback Visual:** Placar atualizado dinamicamente e sombreamento interno (*box-shadow*) no CSS para simular a profundidade de um monitor retrô.
 
 ## 🚀 Como Rodar Localmente
 
-Como o projeto foi construído puramente no front-end, sem necessidade de build ou dependências complexas, executá-lo é super rápido:
+Por ser um projeto *Front-End* puro construído em um único arquivo de execução, não há necessidade de instalação de dependências ou servidores complexos.
 
-1. Faça o download ou clone este repositório.
-2. Abra o arquivo `index.html` diretamente no seu navegador preferido (dando um duplo clique).
-3. **Ou**, se preferir usar o terminal (ex: PowerShell), navegue até a pasta do projeto e execute:
+1. Faça o clone do repositório ou o download do arquivo `index.html`.
+2. Dê um duplo clique no arquivo para abri-lo diretamente no seu navegador.
+3. **Ou**, se preferir usar a linha de comando (ex: PowerShell), digite:
 
 ```powershell
 start index.html
