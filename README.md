@@ -4,6 +4,8 @@
     <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white" alt="HTML5" />
     <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white" alt="CSS3" />
     <img src="https://img.shields.io/badge/JavaScript-323330?style=flat&logo=javascript&logoColor=F7DF1E" alt="JavaScript" />
+    <img src="https://img.shields.io/badge/VS_Code-0078D4?style=flat&logo=visual%20studio%20code&logoColor=white" alt="VS Code" />
+    <img src="https://img.shields.io/badge/GitHub_Copilot-000000?style=flat&logo=github&logoColor=white" alt="GitHub Copilot" />
   </p>
   <p><i>Uma versão nostálgica do clássico Jogo da Cobrinha, desenvolvida com foco em manipulação de DOM, Canvas API e lógica bidimensional.</i></p>
 </div>
@@ -12,7 +14,9 @@
 
 ## 📖 Sobre o Projeto
 
-Este projeto é uma recriação completa do clássico "Snake Game" utilizando puramente **Vanilla JavaScript**, HTML e CSS. O objetivo principal desta aplicação é demonstrar a aplicação prática de fundamentos essenciais da programação web, como estruturas de dados, loops de renderização e consumo de APIs nativas do navegador, sem a dependência de bibliotecas ou frameworks externos.
+Este projeto é uma recriação completa do clássico "Snake Game" utilizando puramente **Vanilla JavaScript**, HTML e CSS. Em prol da transparência no processo de desenvolvimento, **este projeto foi construído utilizando técnicas de Engenharia de Prompt com o auxílio do GitHub Copilot dentro do VS Code**. 
+
+O objetivo principal desta aplicação é demonstrar na prática como a Inteligência Artificial pode atuar como uma parceira na estruturação de fundamentos essenciais da programação web — como estruturas de dados, loops de renderização e consumo de APIs nativas do navegador — sem a dependência de bibliotecas ou frameworks externos.
 
 ## 🧠 Lógica e Arquitetura do Código
 
